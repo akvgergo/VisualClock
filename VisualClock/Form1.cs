@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
 namespace VisualClock {
     public partial class Form1 : Form {
@@ -39,8 +38,5 @@ namespace VisualClock {
             var control = (Control)sender;
             clickLoc = new Point(e.X + control.Location.X, e.Y + control.Location.Y);
         }
-
-        [DllImport("user32.dll")]
-        public static extern void GetCursorPos(out Point p);
     }
 }
